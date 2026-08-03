@@ -466,7 +466,7 @@
         <h2 class="display" style="font-size:clamp(28px,4vw,40px);margin:14px 0 20px;">Start your application</h2>
         <p style="color:var(--mute);margin-bottom:32px;">Takes two minutes. We'll follow up within 24 hours to schedule your call.</p>
 
-        <form id="apply-form">
+        <form id="apply-form" action="https://formspree.io/f/xzdnnrkl" method="POST">
           <div class="row2">
             <div class="field"><label for="name">Player Name</label><input type="text" id="name" name="name" required></div>
             <div class="field"><label for="gradyear">Grad Year</label><input type="text" id="gradyear" name="gradyear" placeholder="2026" required></div>
@@ -534,8 +534,38 @@
   const msg = document.getElementById('form-msg');
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    msg.textContent = '✓ Application received — connect this form to your email/CRM to receive submissions.';
-    form.reset();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    msg.style.color = 'var(--gold)';
+    msg.textContent = '';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if (response.ok) {
+        msg.textContent = '✓ Application received — we\'ll be in touch within 24 hours.';
+        form.reset();
+      } else {
+        response.json().then(function(data){
+          if (data && data.errors && data.errors.length) {
+            msg.style.color = 'var(--red-bright)';
+            msg.textContent = 'Something went wrong: ' + data.errors.map(function(err){ return err.message; }).join(', ');
+          } else {
+            msg.style.color = 'var(--red-bright)';
+            msg.textContent = 'Something went wrong. Please try again or email info@hoopslinkprep.com directly.';
+          }
+        });
+      }
+    }).catch(function(){
+      msg.style.color = 'var(--red-bright)';
+      msg.textContent = 'Something went wrong. Please try again or email info@hoopslinkprep.com directly.';
+    }).finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application';
+    });
   });
 </script>
 
