@@ -246,9 +246,9 @@
       <a href="#post-grad">Post-Grad</a>
       <a href="#about">About</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#apply">Apply</a>
       <a href="#training">Training</a>
       <a href="#media">Media</a>
-      <a href="#apply">Apply</a>
     </div>
     <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
   </nav>
@@ -337,7 +337,7 @@
           </div>
           <div class="legacy-box">
             <img src="images/hoopslink-logo-mockup.jpg" alt="Hoops Link Basketball design, originally created by Kaine's father">
-            <p>"Hoops-Link" was born from a design Kaine's father made around 2013–2014. This is a modern remake of that same original mark, the foundation everything here is built on.</p>
+            <p>"Hoops-Link" was born from a design Kaine's father made around 2013–2014. This is a modern remake of that same original mark, the foundation everything here is built on. His slogan said it best: <em>"Giving back to the game."</em></p>
           </div>
         </div>
       </div>
@@ -386,21 +386,6 @@
                 <cite><b>Coach Jordan Fee</b> — Head Coach, Lamar University Men's Basketball</cite>
               </div>
             </div>
-            <div class="testi-slide">
-              <div class="testi-card pending">
-                College coach testimonial — coming soon.
-              </div>
-            </div>
-            <div class="testi-slide">
-              <div class="testi-card pending">
-                College coach testimonial — coming soon.
-              </div>
-            </div>
-            <div class="testi-slide">
-              <div class="testi-card pending">
-                Testimonial from a Hoops Link parent — coming soon.
-              </div>
-            </div>
           </div>
         </div>
         <div class="carousel-controls">
@@ -414,6 +399,58 @@
       <div class="photo-caption">// Pictured with Lamar University head coach Jordan Fee, Gannon University associate head coach Mike Chalas, and current Nova Southeastern associate head coach Nick Smith</div>
     </div>
   </section>
+
+  <!-- APPLY -->
+  <section id="apply">
+    <div class="wrap apply-grid">
+      <div>
+        <span class="eyebrow">Apply</span>
+        <h2 class="display" style="font-size:clamp(28px,4vw,40px);margin:14px 0 20px;">Start your application</h2>
+        <p style="color:var(--mute);margin-bottom:32px;">Takes two minutes. We'll follow up within 24 hours to schedule your call.</p>
+
+        <form id="apply-form" action="https://formspree.io/f/xzdnnrkl" method="POST">
+          <div class="row2">
+            <div class="field"><label for="name">Player Name</label><input type="text" id="name" name="name" required></div>
+            <div class="field"><label for="gradyear">Grad Year</label><input type="text" id="gradyear" name="gradyear" placeholder="2026" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+            <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
+          </div>
+          <div class="field">
+            <label for="position">Position</label>
+            <select id="position" name="position">
+              <option>Point Guard</option><option>Shooting Guard</option><option>Wing</option><option>Forward</option><option>Center</option>
+            </select>
+          </div>
+          <div class="field"><label for="goals">What's your goal for this year?</label><textarea id="goals" name="goals" rows="4"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="margin-top:6px;">Submit Application</button>
+          <div class="form-msg" id="form-msg" role="status"></div>
+        </form>
+      </div>
+
+      <div>
+        <div class="side-card" id="book">
+          <h3>Not ready to apply yet?</h3>
+          <p>Book a free 15-minute call and we'll walk through whether this cohort is the right fit.</p>
+          <a href="https://calendly.com/hoopslinkbiz/30min" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;margin-top:8px;">Book a 15-Min Call</a>
+          <ul class="side-list">
+            <li>No pressure, no pitch — just a fit check</li>
+            <li>We'll ask about your season and goals</li>
+            <li>You'll leave with a straight answer</li>
+          </ul>
+        </div>
+
+        <div class="side-card" style="margin-top:20px;">
+          <h3>Need financial assistance?</h3>
+          <p>Hoops Link offers limited scholarship support based on need. Fill out the Financial Aid Application and we'll follow up directly.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrO34QkwGTrPukI9sAgdmBOhI__nFonEbDHnD2_zd2FLyzuw/viewform" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;margin-top:8px;">Financial Aid Application</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
   <!-- TRAINING PROGRAM -->
   <section id="training">
@@ -482,7 +519,7 @@
   </section>
 
   <!-- HOOPSLINK MEDIA (gold section) -->
-  <section id="media" class="media-section">
+  <section id="media" class="media-section" style="border-bottom:none;">
     <div class="media-bg"></div>
     <div class="wrap media-inner">
       <div class="section-head">
@@ -502,58 +539,6 @@
       </div>
     </div>
   </section>
-
-  <!-- APPLY -->
-  <section id="apply" style="border-bottom:none;">
-    <div class="wrap apply-grid">
-      <div>
-        <span class="eyebrow">Apply</span>
-        <h2 class="display" style="font-size:clamp(28px,4vw,40px);margin:14px 0 20px;">Start your application</h2>
-        <p style="color:var(--mute);margin-bottom:32px;">Takes two minutes. We'll follow up within 24 hours to schedule your call.</p>
-
-        <form id="apply-form" action="https://formspree.io/f/xzdnnrkl" method="POST">
-          <div class="row2">
-            <div class="field"><label for="name">Player Name</label><input type="text" id="name" name="name" required></div>
-            <div class="field"><label for="gradyear">Grad Year</label><input type="text" id="gradyear" name="gradyear" placeholder="2026" required></div>
-          </div>
-          <div class="row2">
-            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
-            <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
-          </div>
-          <div class="field">
-            <label for="position">Position</label>
-            <select id="position" name="position">
-              <option>Point Guard</option><option>Shooting Guard</option><option>Wing</option><option>Forward</option><option>Center</option>
-            </select>
-          </div>
-          <div class="field"><label for="goals">What's your goal for this year?</label><textarea id="goals" name="goals" rows="4"></textarea></div>
-          <button type="submit" class="btn btn-primary" style="margin-top:6px;">Submit Application</button>
-          <div class="form-msg" id="form-msg" role="status"></div>
-        </form>
-      </div>
-
-      <div>
-        <div class="side-card" id="book">
-          <h3>Not ready to apply yet?</h3>
-          <p>Book a free 15-minute call and we'll walk through whether this cohort is the right fit.</p>
-          <a href="https://calendly.com/hoopslinkbiz/30min" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;margin-top:8px;">Book a 15-Min Call</a>
-          <ul class="side-list">
-            <li>No pressure, no pitch — just a fit check</li>
-            <li>We'll ask about your season and goals</li>
-            <li>You'll leave with a straight answer</li>
-          </ul>
-        </div>
-
-        <div class="side-card" style="margin-top:20px;">
-          <h3>Need financial assistance?</h3>
-          <p>Hoops Link offers limited scholarship support based on need. Fill out the Financial Aid Application and we'll follow up directly.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrO34QkwGTrPukI9sAgdmBOhI__nFonEbDHnD2_zd2FLyzuw/viewform" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;margin-top:8px;">Financial Aid Application</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
 
 <footer>
   <div class="wrap foot-grid">
