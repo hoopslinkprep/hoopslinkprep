@@ -658,12 +658,14 @@
     const prevBtn = document.getElementById('testi-prev');
     const nextBtn = document.getElementById('testi-next');
     let index = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 5000;
 
     slides.forEach(function(_, i){
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-      dot.addEventListener('click', function(){ goTo(i); });
+      dot.addEventListener('click', function(){ goTo(i); restartAutoplay(); });
       dotsWrap.appendChild(dot);
     });
     const dots = dotsWrap.querySelectorAll('.carousel-dot');
@@ -674,15 +676,32 @@
       dots.forEach(function(d, di){ d.classList.toggle('active', di === index); });
     }
 
-    prevBtn.addEventListener('click', function(){ goTo(index - 1); });
-    nextBtn.addEventListener('click', function(){ goTo(index + 1); });
+    function startAutoplay(){
+      autoplayTimer = setInterval(function(){ goTo(index + 1); }, AUTOPLAY_MS);
+    }
+    function stopAutoplay(){
+      if (autoplayTimer) clearInterval(autoplayTimer);
+    }
+    function restartAutoplay(){
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    prevBtn.addEventListener('click', function(){ goTo(index - 1); restartAutoplay(); });
+    nextBtn.addEventListener('click', function(){ goTo(index + 1); restartAutoplay(); });
 
     let startX = 0;
     track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, { passive: true });
     track.addEventListener('touchend', function(e){
       const diff = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diff) > 40) { diff > 0 ? goTo(index - 1) : goTo(index + 1); }
+      if (Math.abs(diff) > 40) { diff > 0 ? goTo(index - 1) : goTo(index + 1); restartAutoplay(); }
     }, { passive: true });
+
+    const carousel = track.closest('.testi-carousel');
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    startAutoplay();
   })();
 
   // Analytics event tracking for key conversion links
