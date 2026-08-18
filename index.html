@@ -171,14 +171,7 @@
   .groups-note{margin-top:14px;background:var(--bg-elev);border:1px solid var(--line);padding:16px 20px;font-size:13px;color:var(--mute);font-family:'Manrope',sans-serif;}
 
   /* TESTIMONIALS */
-  .testimonial-feat{background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:20px;}
-  .testimonial-feat-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);background:var(--bg-elev-2);}
-  .testimonial-feat-top .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.1em;}
-  .testimonial-feat-body{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px;}
-  @media(max-width:640px){.testimonial-feat-body{grid-template-columns:1fr;}}
-  .testimonial-feat-body img{width:100%;height:200px;object-fit:cover;border-radius:var(--radius);}
-  .testimonial-feat-body blockquote{margin:0 0 12px;font-size:14.5px;line-height:1.7;color:var(--cream);}
-  .testimonial-feat-body cite{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);}
+
   .testi-carousel{position:relative;max-width:640px;margin:0 auto;}
   .testi-track-wrap{overflow:hidden;}
   .testi-track{display:flex;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
@@ -186,6 +179,8 @@
   .testi-card{background:var(--bg-elev);border:1px solid var(--line);padding:24px;min-height:180px;display:flex;flex-direction:column;justify-content:center;}
   .testi-card blockquote{margin:0 0 14px;font-size:13.5px;line-height:1.65;color:var(--cream);}
   .testi-card cite{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mute);display:block;}
+  .testi-avatar-row{display:flex;align-items:center;gap:16px;margin-top:8px;}
+  .testi-card-photo{width:100%;height:240px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:16px;display:block;}
   .testi-card cite a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s;}
   .testi-card cite a:hover{border-color:var(--gold);}
   .testi-card cite b{color:var(--gold);font-weight:600;}
@@ -376,19 +371,6 @@
         <h2 class="display">Real players, real results</h2>
       </div>
 
-      <div class="testimonial-feat">
-        <div class="testimonial-feat-top">
-          <span class="tag">FEATURED — POST-GRAD PROGRAM</span>
-        </div>
-        <div class="testimonial-feat-body">
-          <img src="images/jacob-phsc-commit.jpg" alt="Jacob Yeager's commitment announcement to Pasco-Hernando State College">
-          <div>
-            <blockquote>"I left New College of Florida not really knowing what was next, but hitting up Coach Kaine changed all of that. I started training with him in the winter, took my classes online through PHSC, and fully trusted his program. He introduced me to real college level, real next level strength and agility training, and I put on fifteen pounds over six months working with Coach K and Coach Al. We did training on the sand, in the pool, and outside mental toughness accountability days. It wasn't just drills, it was a whole different approach to the game that I feel is setting me up for success at the next level. Going to Nova Southeastern for an unofficial visit, getting to work out in front of their coaches, and touring the campus was a great experience for me. On a trip to the USF vs Florida Atlantic game in Tampa, I got to meet and speak with a Division I men's basketball coach, Coach Fee, the head coach at Lamar University. I trained alongside multiple pros and built real relationships with the whole staff at Hoops Link Prep, Coach Al and Coach Matt included. Kaine checked in with me every single day, accountability, film, mindset, all of it. He helped me get updated highlight film and edit it the right way to send to college coaches, which helped me get visits. But it wasn't just about basketball, he made sure my head was right too, on and off the court. Hoops Link Prep is Academy of the Flow for a reason. I found mine there."</blockquote>
-            <cite>— Jacob Yeager, committed to Pasco-Hernando State College (PHSC)</cite>
-          </div>
-        </div>
-      </div>
-
       <div class="testi-carousel">
         <div class="testi-track-wrap">
           <div class="testi-track" id="testi-track">
@@ -400,6 +382,7 @@
             </div>
             <div class="testi-slide">
               <div class="testi-card">
+                <img src="images/coach-bozeman.jpg" alt="Coach Solomon Bozeman" class="testi-card-photo">
                 <blockquote>"Kaine was a high-character guy with a relentless work ethic; a self-made player who loved being in the gym and earned everything through hard work and toughness. His work ethic was second to none. He's going to be a great coach because of how much he genuinely cares for the game."</blockquote>
                 <cite><a href="https://uapblionsroar.com/sports/mens-basketball/roster/coaches/solomon-bozeman/553" target="_blank" rel="noopener"><b>Coach Solomon Bozeman</b></a> — Head Coach, University of Arkansas at Pine Bluff</cite>
               </div>
@@ -412,14 +395,22 @@
             </div>
             <div class="testi-slide">
               <div class="testi-card" style="padding:16px;">
-                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:10px;text-align:center;">TRAINING SESSION — REY IDOWU</div>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXe9tdvjP4l/" data-instgrm-version="14" style="background:#000; border:1px solid var(--line); border-radius:var(--radius); margin:0 auto; width:100%; max-width:280px;"></blockquote>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:10px;text-align:center;">HIGHLIGHT TAPE — HOOPS LINK TRAINING ACADEMY</div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXe9tdvjP4l/" data-instgrm-version="14" style="background:#000; border:1px solid var(--line); border-radius:var(--radius); margin:0 auto; width:100%; max-width:400px;"></blockquote>
               </div>
             </div>
             <div class="testi-slide">
               <div class="testi-card">
+                <img src="images/coach-fee.jpg" alt="Coach Jordan Fee" class="testi-card-photo">
                 <blockquote>"Former NSU Men's Basketball CHAMP! So proud of you and all you've done. Now you're giving back and going to have a major impact on so many youngsters."</blockquote>
                 <cite><a href="https://lamarcardinals.com/staff-directory/jordan-fee/3662" target="_blank" rel="noopener"><b>Coach Jordan Fee</b></a> — Head Coach, Lamar University Men's Basketball</cite>
+              </div>
+            </div>
+            <div class="testi-slide">
+              <div class="testi-card">
+                <img src="images/jacob-phsc-commit.jpg" alt="Jacob Yeager" class="testi-card-photo">
+                <blockquote>"I left New College of Florida not really knowing what was next, but hitting up Coach Kaine changed all of that. I started training with him in the winter, took my classes online through PHSC, and fully trusted his program. He introduced me to real college level, real next level strength and agility training, and I put on fifteen pounds over six months working with Coach K and Coach Al. We did training on the sand, in the pool, and outside mental toughness accountability days. It wasn't just drills, it was a whole different approach to the game that I feel is setting me up for success at the next level. Going to Nova Southeastern for an unofficial visit, getting to work out in front of their coaches, and touring the campus was a great experience for me. On a trip to the USF vs Florida Atlantic game in Tampa, I got to meet and speak with a Division I men's basketball coach, Coach Fee, the head coach at Lamar University. I trained alongside multiple pros and built real relationships with the whole staff at Hoops Link Prep, Coach Al and Coach Matt included. Kaine checked in with me every single day, accountability, film, mindset, all of it. He helped me get updated highlight film and edit it the right way to send to college coaches, which helped me get visits. But it wasn't just about basketball, he made sure my head was right too, on and off the court. Hoops Link Prep is Academy of the Flow for a reason. I found mine there."</blockquote>
+                <cite><b>Jacob Yeager</b> — Committed to Pasco-Hernando State College (PHSC)</cite>
               </div>
             </div>
           </div>
