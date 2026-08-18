@@ -177,8 +177,6 @@
   .testi-track{display:flex;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
   .testi-slide{flex:0 0 100%;padding:0 4px;box-sizing:border-box;}
   .testi-card{background:var(--bg-elev);border:1px solid var(--line);padding:24px;min-height:180px;display:flex;flex-direction:column;justify-content:center;}
-  .testi-graphic-card{padding:0;background:transparent;border:1px solid var(--line);overflow:hidden;}
-  .testi-graphic-card img{width:100%;display:block;}
   .testi-card blockquote{margin:0 0 14px;font-size:13.5px;line-height:1.65;color:var(--cream);}
   .testi-card cite{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mute);display:block;}
   .testi-avatar-row{display:flex;align-items:center;gap:16px;margin-top:8px;}
@@ -377,13 +375,16 @@
         <div class="testi-track-wrap">
           <div class="testi-track" id="testi-track">
             <div class="testi-slide">
-              <div class="testi-card testi-graphic-card">
-                <img src="images/testimonial-shane-card.jpg" alt="Shane Hunter testimonial">
+              <div class="testi-card">
+                <blockquote>"Coach Kizz is one of them ones! Elite trainer who has helped my game develop in multiple ways. We focused on shooting and strength training this summer but Kizz has also helped the way I approach the game from a mental standpoint. Not only does he make time for his players but he'll break a sweat with you too!"</blockquote>
+                <cite><a href="https://maccabi.co.il/news.asp?id=37735&lang=en" target="_blank" rel="noopener"><b>Shane Hunter</b></a> — Euroleague, Maccabi Tel Aviv</cite>
               </div>
             </div>
             <div class="testi-slide">
-              <div class="testi-card testi-graphic-card">
-                <img src="images/testimonial-bozeman-card.jpg" alt="Coach Solomon Bozeman testimonial">
+              <div class="testi-card">
+                <img src="images/coach-bozeman.jpg" alt="Coach Solomon Bozeman" class="testi-card-photo">
+                <blockquote>"Kaine was a high-character guy with a relentless work ethic; a self-made player who loved being in the gym and earned everything through hard work and toughness. His work ethic was second to none. He's going to be a great coach because of how much he genuinely cares for the game."</blockquote>
+                <cite><a href="https://uapblionsroar.com/sports/mens-basketball/roster/coaches/solomon-bozeman/553" target="_blank" rel="noopener"><b>Coach Solomon Bozeman</b></a> — Head Coach, University of Arkansas at Pine Bluff</cite>
               </div>
             </div>
             <div class="testi-slide">
@@ -395,8 +396,10 @@
               </div>
             </div>
             <div class="testi-slide">
-              <div class="testi-card testi-graphic-card">
-                <img src="images/testimonial-fee-card.jpg" alt="Coach Jordan Fee testimonial">
+              <div class="testi-card">
+                <img src="images/coach-fee.jpg" alt="Coach Jordan Fee" class="testi-card-photo">
+                <blockquote>"Former NSU Men's Basketball CHAMP! So proud of you and all you've done. Now you're giving back and going to have a major impact on so many youngsters."</blockquote>
+                <cite><a href="https://lamarcardinals.com/staff-directory/jordan-fee/3662" target="_blank" rel="noopener"><b>Coach Jordan Fee</b></a> — Head Coach, Lamar University Men's Basketball</cite>
               </div>
             </div>
             <div class="testi-slide">
