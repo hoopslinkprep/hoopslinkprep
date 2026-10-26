@@ -34,13 +34,23 @@ Deployment: any push to `main` auto-deploys on Render. No build step (plain HTML
 2. Post-Grad Program — the core offer, pain-point framing, housing (Trinity FL, max 3–4 out-of-state players/year, apartment complex is "Regatta at Trinity" — NOT currently named on site, kept vague intentionally), training area (greater Tampa Bay)
 3. About / "Meet the Creator" — Coach Kaine's bio (playing career: Nature Coast Technical HS → Nova Southeastern under Jim Crutchfield, highest win % in NCAA history → Bluefield State under Devin Hoehn → Arkansas-Pine Bluff under Solomon Bozeman), legacy design callout
 4. Testimonials — auto-advancing carousel (6s/slide, pauses on hover/interaction), mix of text-quote cards and full designed "graphic cards" (photo + quote baked into one image, built externally with PIL, stored as jpgs in /images). Currently: Shane Hunter, Coach Solomon Bozeman, Coach Jordan Fee, Rey Idowu (graphic card), Rey's highlight video (separate slide, Instagram embed), Jacob Yeager (marked "★ POST-GRAD PROGRAM ★", last slide)
+4b. Latest News — homepage teaser card linking to the newest post in /news (update it when a new post goes up)
 5. "Real Next Level Exposure" — standalone photo section (Nature Coast Technical training photo)
 6. Apply — application form (POSTs to Formspree, endpoint in the form's `action` attr), Calendly link for booking calls, Financial Aid Application (Google Form link)
 7. Online Training — Silver/Gold tier cards, NO pricing shown publicly (pricing not finalized), both tiers link to Apply
 8. Hoops Link Media — gold-themed section (scoped CSS override), Instagram (@hoopslinkmedia) and Twitter/X (@kainemccolley1) links, featured Instagram reel embed
 9. In-Person Training — pricing IS shown here: Individual $75/session, Individual 3-pack $175, Group $30/session (3–5 players, MS/HS/Girls/Boys divisions), Group 3-pack $75. Square payment links on each button. Scarcity banner: "only 2 individual clients and 2 group sessions" currently available.
 
-Footer: email (info@hoopslinkprep.com), WhatsApp link (wa.me/qr/2RAWRQTTPULUK1).
+Footer: News link, email (info@hoopslinkprep.com), WhatsApp link (wa.me/qr/2RAWRQTTPULUK1).
+
+## News Section (/news)
+
+- `news/index.html` lists all posts (newest first; copy the `news-card` block for each new post). Each post is its own page, e.g. `news/logan-white-commits.html`, with NewsArticle structured data (JSON-LD). Shared styles in `news/news.css`, analytics + preferred-source fallback in `news/news.js`.
+- Post images live in `images/news/` (resize commitment graphics to 1080px wide).
+- When adding a post: add the page, add a card to `news/index.html`, update the homepage "Latest News" teaser, and add the URL to `sitemap.xml`.
+- Only publish player facts the player/family/coach confirmed (records, stats). Don't invent quotes.
+- Google "Preferred Sources" button is on the news pages; if Google's script doesn't render it, `news.js` swaps in a plain link to google.com/preferences/source?q=hoopslinkprep.com.
+- Homepage has SportsOrganization JSON-LD in the `<head>`; `robots.txt` + `sitemap.xml` live at the repo root.
 
 ## Key Business Facts (for any new copy)
 
