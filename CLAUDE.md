@@ -30,7 +30,7 @@ Deployment: any push to `main` auto-deploys on Render. No build step (plain HTML
 
 ## Site Structure (current section order, top to bottom)
 
-1. Hero — headline, countdown clock (currently set to Aug 31 enrollment deadline, update as needed), CTAs
+1. Hero — headline, CTAs, "Limited spots available" badge for transfers & post-grads (replaced the old Aug 31 countdown on 2026-10-27; swap the badge copy when the season changes)
 2. Post-Grad Program — the core offer, pain-point framing, housing (Trinity FL, max 3–4 out-of-state players/year, apartment complex is "Regatta at Trinity" — NOT currently named on site, kept vague intentionally), training area (greater Tampa Bay)
 3. About / "Meet the Creator" — Coach Kaine's bio (playing career: Nature Coast Technical HS → Nova Southeastern under Jim Crutchfield, highest win % in NCAA history → Bluefield State under Devin Hoehn → Arkansas-Pine Bluff under Solomon Bozeman), legacy design callout
 4. Testimonials — auto-advancing carousel (6s/slide, pauses on hover/interaction), mix of text-quote cards and full designed "graphic cards" (photo + quote baked into one image, built externally with PIL, stored as jpgs in /images). Currently: Shane Hunter, Coach Solomon Bozeman, Coach Jordan Fee, Rey Idowu (graphic card), Rey's highlight video (separate slide, Instagram embed), Jacob Yeager (marked "★ POST-GRAD PROGRAM ★", last slide)

@@ -154,11 +154,12 @@
   .hero h1 .accent{color:var(--red-bright);}
   .hero p.lede{max-width:560px;font-size:17.5px;color:var(--mute);margin:0 0 32px;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
-  .clock{display:inline-flex;gap:20px;padding:16px 20px;background:rgba(23,19,16,0.85);border:1px solid var(--line);border-radius:var(--radius);}
-  .clock-unit{text-align:center;min-width:48px;}
-  .clock-num{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:var(--gold);}
-  .clock-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--mute);text-transform:uppercase;}
-  .clock-note{font-size:12.5px;color:var(--mute);margin-top:10px;font-style:italic;}
+  .spots{display:inline-flex;align-items:center;gap:14px;max-width:100%;padding:16px 20px;background:rgba(23,19,16,0.85);border:1px solid var(--line);border-radius:var(--radius);}
+  .spots-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex:none;box-shadow:0 0 0 0 rgba(212,167,60,0.6);animation:spots-pulse 2s infinite;}
+  @keyframes spots-pulse{70%{box-shadow:0 0 0 10px rgba(212,167,60,0);}100%{box-shadow:0 0 0 0 rgba(212,167,60,0);}}
+  @media (prefers-reduced-motion:reduce){.spots-dot{animation:none;}}
+  .spots-title{font-family:'Anton',sans-serif;font-size:20px;letter-spacing:0.03em;text-transform:uppercase;color:var(--gold);line-height:1.1;}
+  .spots-sub{font-size:13px;color:var(--mute);margin-top:4px;}
 
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:start;}
@@ -315,20 +316,20 @@
   <section class="hero" style="padding-bottom:0;">
     <div class="hero-bg"></div>
     <div class="wrap hero-inner">
-      <span class="eyebrow">FALL COHORT — APPLICATIONS OPEN</span>
+      <span class="eyebrow">2026–27 SEASON — APPLICATIONS OPEN</span>
       <h1 class="display">YOUR SENIOR SEASON<br>WASN'T THE FINISH LINE.<br><span class="accent">IT WAS THE FILM.</span></h1>
       <p class="lede">One offseason of real skill development, real exposure, and a real recruiting plan — built for post-grad players who aren't done chasing the next level.</p>
       <div class="hero-ctas">
         <a href="#apply" class="btn btn-primary">Apply For Your Spot</a>
         <a href="https://calendly.com/hoopslinkbiz/30min" target="_blank" rel="noopener" class="btn btn-outline">Book a 15-Min Call</a>
       </div>
-      <div class="clock" id="clock" aria-label="Time remaining to apply this month">
-        <div class="clock-unit"><div class="clock-num" id="c-days">--</div><div class="clock-label">Days</div></div>
-        <div class="clock-unit"><div class="clock-num" id="c-hours">--</div><div class="clock-label">Hrs</div></div>
-        <div class="clock-unit"><div class="clock-num" id="c-mins">--</div><div class="clock-label">Min</div></div>
-        <div class="clock-unit"><div class="clock-num" id="c-secs">--</div><div class="clock-label">Sec</div></div>
+      <div class="spots">
+        <span class="spots-dot" aria-hidden="true"></span>
+        <div>
+          <div class="spots-title">Limited spots available</div>
+          <div class="spots-sub">Transfers &amp; post-grad players · still enrolling for this season</div>
+        </div>
       </div>
-      <div class="clock-note">August enrollment window closes Aug 31 · limited cohort seats</div>
     </div>
   </section>
 
@@ -662,23 +663,6 @@
 </footer>
 
 <script>
-  const deadline = new Date('2026-08-31T23:59:59');
-  function tick(){
-    const now = new Date();
-    let diff = deadline - now;
-    if(diff < 0) diff = 0;
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-    document.getElementById('c-days').textContent = String(d).padStart(2,'0');
-    document.getElementById('c-hours').textContent = String(h).padStart(2,'0');
-    document.getElementById('c-mins').textContent = String(m).padStart(2,'0');
-    document.getElementById('c-secs').textContent = String(s).padStart(2,'0');
-  }
-  tick();
-  setInterval(tick, 1000);
-
   const form = document.getElementById('apply-form');
   const msg = document.getElementById('form-msg');
   form.addEventListener('submit', function(e){
