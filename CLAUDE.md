@@ -39,7 +39,7 @@ Deployment: any push to `main` auto-deploys on Render. No build step (plain HTML
 6. Apply — application form (POSTs to Formspree, endpoint in the form's `action` attr), Calendly link for booking calls, Financial Aid Application (Google Form link)
 7. Online Training — Silver/Gold tier cards, NO pricing shown publicly (pricing not finalized), both tiers link to Apply
 8. Hoops Link Media — gold-themed section (scoped CSS override), Instagram (@hoopslinkmedia) and Twitter/X (@kainemccolley1) links, featured Instagram reel embed
-9. In-Person Training — pricing IS shown here: Individual $75/session, Individual 3-pack $175, Group $30/session (3–5 players, MS/HS/Girls/Boys divisions), Group 3-pack $75. Square payment links on each button. Scarcity banner: "only 2 individual clients and 2 group sessions" currently available.
+9. In-Person Training — **NO public pricing** (user, 2026-10-27: no prices anywhere until pricing/sales are locked in). Four cards (Individual, Individual 3 sessions, Group 3–5 players with MS/HS/Girls/Boys divisions, Group 3 sessions), each with a "Book a Call" button to Calendly. The old Square checkout links (they show prices) are in git history if they come back. Scarcity banner: "only 2 individual clients and 2 group sessions" currently available.
 
 Footer: News link, email (info@hoopslinkprep.com), WhatsApp link (wa.me/qr/2RAWRQTTPULUK1).
 
