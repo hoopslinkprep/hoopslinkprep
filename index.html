@@ -252,7 +252,16 @@
     background:#0A0805;
     overflow:hidden;
   }
-  .media-bg{position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,8,5,0.25), rgba(10,8,5,0.75)), url('images/media-bg-gold.jpg');background-size:cover;background-position:center 20%;opacity:0.95;}
+  .media-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 38% at 50% 14%, rgba(212,167,60,0.20), rgba(212,167,60,0) 70%),linear-gradient(180deg,#14100A 0%,#0A0805 100%);}
+  .media-court{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:1400px;max-width:none;height:auto;opacity:.55;pointer-events:none;}
+  .media-inner{text-align:center;}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  .hlm-logo{display:block;margin:0 auto;max-width:520px;width:100%;overflow:visible;}
+  .hlm-br{display:none;}
+  @media (max-width:600px){.media-section .hlm-tag{letter-spacing:.2em;font-size:11px;}.hlm-br{display:inline;}.hlm-sep{display:none;}}
+  .hlm-tag{font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.32em;font-size:13px;color:#E9C46A;text-transform:uppercase;margin:22px 0 0;line-height:2;}
+  .media-section .media-links{justify-content:center;max-width:640px;margin:40px auto 0;}
+  .media-section .media-card{background:rgba(10,8,5,.55);border:1px solid rgba(212,167,60,.35);text-align:center;}
   .media-inner{position:relative;z-index:2;}
   .media-section .eyebrow{color:var(--gold-bright);}
   .media-section .eyebrow::before{background:var(--gold-bright);box-shadow:0 0 0 3px rgba(242,201,76,0.18);}
@@ -553,12 +562,31 @@
   <!-- HOOPSLINK MEDIA (gold section) -->
   <section id="media" class="media-section">
     <div class="media-bg"></div>
+    <svg class="media-court" viewBox="0 0 1400 620" aria-hidden="true" fill="none" stroke="#D4A73C" stroke-opacity=".28" stroke-width="1.5">
+      <path d="M0 330 Q700 -60 1400 330"/><ellipse cx="700" cy="470" rx="420" ry="120"/>
+      <path d="M0 620 Q700 330 1400 620"/><line x1="530" y1="470" x2="490" y2="620"/><line x1="870" y1="470" x2="910" y2="620"/><line x1="700" y1="420" x2="700" y2="620"/>
+    </svg>
     <div class="wrap media-inner">
-      <div class="section-head">
-        <span class="eyebrow">Hoops Link Media</span>
-        <h2 class="display">Follow the journey</h2>
-        <p>Interviews, film breakdowns, and behind-the-scenes from Hoops Link Prep — coaches, players, and the road to the next level.</p>
-      </div>
+      <h2 class="sr-only">Hoops Link Media</h2>
+      <svg class="hlm-logo" viewBox="0 -70 1000 590" overflow="visible" role="img" aria-label="Hoops Link Media">
+        <defs>
+          <radialGradient id="hlmBall" cx="40%" cy="32%" r="70%"><stop offset="0" stop-color="#F6D57A"/><stop offset=".55" stop-color="#D4A73C"/><stop offset="1" stop-color="#8C6D1F"/></radialGradient>
+          <radialGradient id="hlmHalo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#D4A73C" stop-opacity=".45"/><stop offset="1" stop-color="#D4A73C" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="500" cy="120" r="170" fill="url(#hlmHalo)"/>
+        <circle cx="500" cy="120" r="96" fill="url(#hlmBall)"/>
+        <g fill="none" stroke="#3a2a0c" stroke-width="5">
+          <line x1="500" y1="24" x2="500" y2="216"/><line x1="404" y1="120" x2="596" y2="120"/>
+          <path d="M436 50 Q478 120 436 190"/><path d="M564 50 Q522 120 564 190"/>
+        </g>
+        <path d="M330 236 Q500 214 670 236" fill="none" stroke="#D4A73C" stroke-width="3" opacity=".8"/>
+        <ellipse cx="500" cy="242" rx="120" ry="8" fill="#000" opacity=".45"/>
+        <text x="500" y="378" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="124" letter-spacing="2"><tspan fill="#F4EFE6">HOOPS </tspan><tspan fill="#F2D27A">LINK</tspan></text>
+        <line x1="170" y1="452" x2="350" y2="452" stroke="#D4A73C" stroke-opacity=".7" stroke-width="2.5"/>
+        <line x1="650" y1="452" x2="830" y2="452" stroke="#D4A73C" stroke-opacity=".7" stroke-width="2.5"/>
+        <text x="500" y="468" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="46" letter-spacing="22" fill="#E9C46A">MEDIA</text>
+      </svg>
+      <p class="hlm-tag">Interviews · Film Breakdowns<span class="hlm-sep"> · </span><br class="hlm-br">Behind the Scenes</p>
 
       <div class="media-links">
         <a href="https://instagram.com/hoopslinkmedia" target="_blank" rel="noopener" class="media-card">

@@ -39,7 +39,7 @@ Deployment: any push to `main` auto-deploys on Render. No build step (plain HTML
 5. "Real Next Level Exposure" — standalone photo section (Nature Coast Technical training photo)
 6. Apply — application form (POSTs to Formspree, endpoint in the form's `action` attr), Calendly link for booking calls, Financial Aid Application (Google Form link)
 7. (Online Training section removed 2026-10-27: no paid online program. If it returns, it will be something free.)
-8. Hoops Link Media — gold-themed section (scoped CSS override), Instagram (@hoopslinkmedia) and Twitter/X (@kainemccolley1) links, featured Instagram reel embed
+8. Hoops Link Media: a clean centered section (redone 2026-10-27 from the user's podcast-cover reference). Dark gradient + gold halo, an inline-SVG logo (gold ball, serif "HOOPS LINK" with LINK in gold, ruled "MEDIA"), faint gold court-line SVG, a spaced serif tagline, IG + X handle cards, and the featured reel embed. `images/media-bg-gold.jpg` is no longer used as the background.
 9. (In-Person Training section removed 2026-10-27: the user isn't taking training clients, so the site is all post-grad prep. Old cards/Square links are in git history.)
 
 Footer: News link, email (info@hoopslinkprep.com), WhatsApp link (wa.me/qr/2RAWRQTTPULUK1).
