@@ -38,9 +38,9 @@ Deployment: any push to `main` auto-deploys on Render. No build step (plain HTML
 4b. Latest News — homepage teaser card linking to the newest post in /news (update it when a new post goes up)
 5. "Real Next Level Exposure" — standalone photo section (Nature Coast Technical training photo)
 6. Apply — application form (POSTs to Formspree, endpoint in the form's `action` attr), Calendly link for booking calls, Financial Aid Application (Google Form link)
-7. Online Training — Silver/Gold tier cards, NO pricing shown publicly (pricing not finalized), both tiers link to Apply
+7. (Online Training section removed 2026-10-27: no paid online program. If it returns, it will be something free.)
 8. Hoops Link Media — gold-themed section (scoped CSS override), Instagram (@hoopslinkmedia) and Twitter/X (@kainemccolley1) links, featured Instagram reel embed
-9. In-Person Training — **NO public pricing** (user, 2026-10-27: no prices anywhere until pricing/sales are locked in). Four cards (Individual, Individual 3 sessions, Group 3–5 players with MS/HS/Girls/Boys divisions, Group 3 sessions), each with a "Book a Call" button to Calendly. The old Square checkout links (they show prices) are in git history if they come back. Scarcity banner: "only 2 individual clients and 2 group sessions" currently available.
+9. (In-Person Training section removed 2026-10-27: the user isn't taking training clients, so the site is all post-grad prep. Old cards/Square links are in git history.)
 
 Footer: News link, email (info@hoopslinkprep.com), WhatsApp link (wa.me/qr/2RAWRQTTPULUK1).
 
