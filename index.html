@@ -139,6 +139,14 @@
 
   section{padding:84px 0;border-bottom:1px solid var(--line);}
   .section-head{max-width:640px;margin-bottom:48px;}
+  .year-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:step;}
+  .year-steps li{background:var(--bg-elev);border:1px solid var(--line);padding:26px 24px;position:relative;}
+  .year-steps li::before{counter-increment:step;content:counter(step,decimal-leading-zero);display:block;font-family:'Anton',sans-serif;font-size:44px;color:var(--gold-bright);line-height:1;margin-bottom:12px;}
+  .year-steps h3{font-size:20px;margin:0 0 8px;color:var(--cream);}
+  .year-steps p{font-size:14.5px;color:var(--mute);margin:0;line-height:1.55;}
+  .year-steps li.goal{border-color:var(--gold);}
+  @media (max-width:860px){.year-steps{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.year-steps{grid-template-columns:1fr;}}
   .explained-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch;}
   .explained-row figure{margin:0;scroll-snap-align:start;}
   .explained-row img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid var(--line);}
@@ -344,6 +352,26 @@
     </div>
   </section>
 
+  <!-- HOOPS LINK, EXPLAINED (Hoops Link Media graphics; sources in HOOPSLINK/media/graphics/ig-set-01) -->
+  <section id="explained">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Hoops Link, Explained</span>
+        <h2 class="display">Swipe through it</h2>
+      </div>
+      <div class="explained-row">
+        <figure><img src="images/graphics/02-what-is-post-grad.jpg" loading="lazy" alt="What is a post-grad year? One extra year after high school, before college. You've graduated, but you're not done. A year to get better, and to get seen."></figure>
+        <figure><img src="images/graphics/03-its-in-the-name.jpg" loading="lazy" alt="It's in the name. Hoops: basketball is the vehicle. Link: we connect you to the people who open doors. Prep: ready for what college really demands. Giving back to the game."></figure>
+        <figure><img src="images/graphics/07-meet-coach-kaine.jpg" loading="lazy" alt="Meet the coach: Coach Kaine McColley. Been where you're going. Nature Coast Tech, Nova Southeastern, Bluefield State, Arkansas-Pine Bluff. Former North Suncoast Player of the Year, All-American Honorable Mention, certified personal trainer, 2x HBCU graduate."></figure>
+        <figure><img src="images/graphics/06-limited-spots.jpg" loading="lazy" alt="Limited spots for 2026-27. Transfers and post-grad players, still enrolling for this season. Boarding available along Florida's Nature Coast, only 3 to 4 out-of-state players a year."></figure>
+      </div>
+      <div class="hero-ctas" style="margin-top:28px;">
+        <a href="#apply" class="btn btn-primary">Apply For a Spot</a>
+      </div>
+    </div>
+  </section>
+
+
   <!-- POST-GRAD PROGRAM -->
   <section id="post-grad">
     <div class="wrap">
@@ -378,21 +406,25 @@
     </div>
   </section>
 
-  <!-- HOOPS LINK, EXPLAINED (Hoops Link Media graphics; sources in HOOPSLINK/media/graphics/ig-set-01) -->
-  <section id="explained">
+  <!-- HOW THE YEAR WORKS -->
+  <section id="how-it-works">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Hoops Link, Explained</span>
-        <h2 class="display">Swipe through it</h2>
+        <span class="eyebrow">How the Year Works</span>
+        <h2 class="display">From application to the next level</h2>
+        <p>One year, built step by step. Here's the path.</p>
       </div>
-      <div class="explained-row">
-        <figure><img src="images/graphics/02-what-is-post-grad.jpg" loading="lazy" alt="What is a post-grad year? One extra year after high school, before college. You've graduated, but you're not done. A year to get better, and to get seen."></figure>
-        <figure><img src="images/graphics/03-its-in-the-name.jpg" loading="lazy" alt="It's in the name. Hoops: basketball is the vehicle. Link: we connect you to the people who open doors. Prep: ready for what college really demands. Giving back to the game."></figure>
-        <figure><img src="images/graphics/07-meet-coach-kaine.jpg" loading="lazy" alt="Meet the coach: Coach Kaine McColley. Been where you're going. Nature Coast Tech, Nova Southeastern, Bluefield State, Arkansas-Pine Bluff. Former North Suncoast Player of the Year, All-American Honorable Mention, certified personal trainer, 2x HBCU graduate."></figure>
-        <figure><img src="images/graphics/06-limited-spots.jpg" loading="lazy" alt="Limited spots for 2026-27. Transfers and post-grad players, still enrolling for this season. Boarding available along Florida's Nature Coast, only 3 to 4 out-of-state players a year."></figure>
-      </div>
-      <div class="hero-ctas" style="margin-top:28px;">
-        <a href="#apply" class="btn btn-primary">Apply For a Spot</a>
+      <ol class="year-steps">
+        <li><h3>Apply</h3><p>Tell us about your game, your grades, and where you want to go. We follow up within 24 hours.</p></li>
+        <li><h3>15-minute call</h3><p>A real conversation with Coach Kaine, the player and the family, to see if the fit is right on both sides.</p></li>
+        <li><h3>Arrive &amp; settle in</h3><p>Boarding is available along Florida's Nature Coast, with only three to four out-of-state players a year, so nobody gets lost in the shuffle.</p></li>
+        <li><h3>Build: mind, body, spirit</h3><p>Mobility-first lower body, max-strength upper body, skill work, and the Mental Flow Framework every day.</p></li>
+        <li><h3>Get seen</h3><p>Film, direct conversations with college coaches, and unofficial campus visits. Relationships, not a mass email.</p></li>
+        <li class="goal"><h3>Take the next step</h3><p>The goal is the right college fit: a program where you can play, grow, and stay.</p></li>
+      </ol>
+      <div class="hero-ctas" style="margin-top:32px;">
+        <a href="#apply" class="btn btn-primary">Start Your Application</a>
+        <a href="https://calendly.com/hoopslinkbiz/30min" target="_blank" rel="noopener" class="btn btn-outline">Book a 15-Min Call</a>
       </div>
     </div>
   </section>
